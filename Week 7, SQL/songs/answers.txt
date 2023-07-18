@@ -1,0 +1,3 @@
+I will characterize their audio aura by taking the average of energy, valence and danceability of a user's top 100 listenings of the year.
+
+It will be even better if we include parameters like speechiness and tempo while taking the average.
