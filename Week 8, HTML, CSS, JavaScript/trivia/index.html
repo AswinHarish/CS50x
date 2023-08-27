@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // For correct answer
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = "green";
+                    document.querySelector("#ans1").innerHTML = "Correct!";
+                });
+
+                // For wrong answers
+                let incorrectButtons = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrectButtons.length; i++) {
+                    incorrectButtons[i].addEventListener("click", function() {
+                        incorrectButtons[i].style.backgroundColor = "red";
+                        document.querySelector("#ans1").innerHTML = "Incorrect!";
+                    });
+                }
+
+                // For free response check answer
+                let checkButton = document.querySelector('#check');
+                checkButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    let answerInput = document.querySelector('input[type="text"]');
+                    let answer = answerInput.value.toLowerCase();
+                    let ans2Element = document.querySelector("#ans2");
+
+                    if (answer === "albert einstein") {
+                        ans2Element.innerHTML = "Correct!";
+                        checkButton.style.backgroundColor = "green";
+                    } else {
+                        ans2Element.innerHTML = "Incorrect!";
+                        checkButton.style.backgroundColor = "red";
+                    }
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Multiple choice question -->
+                <h3>What is the smallest planet in our solar system?</h3>
+
+                <button type="text" class="incorrect">Earth</button>
+                <button type="text" class="incorrect">Mars</button>
+                <button type="text" class="incorrect">Pluto</button>
+                <button type="text" class="correct">Mercury</button>
+                <button type="text" class="incorrect">Venus</button>
+
+                <p id="ans1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Free response question  -->
+                <h3>Which famous scientist developed the theory of general relativity?</h3>
+                <form>
+                    <input type="text" placeholder="Answer">
+                    <button id="check">Check Answer</button>
+                    <p id="ans2"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
