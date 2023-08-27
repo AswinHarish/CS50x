@@ -1,0 +1,109 @@
+.container {
+    text-align: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+body {
+    text-align: center;
+    margin: 0;
+    background-color: lightgray;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+hr {
+    border: none; /* Clear the default border */
+    border-top: 3px solid black; /* Add a new border with the desired thickness and color */
+}
+
+span {
+    font-size: 22px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 0;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+
+}
+
+.con1 {
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 39px;
+    padding-top: 22px;
+}
+
+table.table-bordered-dark th,
+table.table-bordered-dark td {
+    border-color: #333; /* Dark border color */
+}
+
+/* Add this in your styles.css or within a <style> tag in the <head> section
+.color-change-box {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    margin-top: 20px;
+} */
+
+#colorChangeBtn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.scrolling-text {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling-text p {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.centered-ol {
+    margin: 0 auto; /* Automatically centers the list horizontally */
+    width: fit-content; /* Limits the width to the content size */
+    text-align: center; /* Centers the list items within the list */
+}
